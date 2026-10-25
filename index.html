@@ -1,0 +1,945 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beyond the Frame | El Gouna Cinema</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header id="header" class="header">
+    <div class="nav-container">
+
+      <a href="#home" class="logo">
+        <span class="logo-mark">GFF</span>
+        <span class="logo-divider"></span>
+        <span class="logo-subtitle">BEYOND<br>THE FRAME</span>
+      </a>
+
+      <nav class="desktop-nav">
+        <a href="#home">HOME</a>
+        <a href="#about">ABOUT</a>
+        <a href="#persons">PERSONS</a>
+        <a href="#contact">CONTACT</a>
+      </nav>
+
+      <div class="nav-end">
+        <span class="nav-edition">EST. 2017 / EL GOUNA</span>
+        <button id="menuToggle" class="menu-toggle"
+          type="button" aria-label="Toggle menu"
+          aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+    </div>
+
+    <nav id="mobileNav" class="mobile-nav">
+      <a href="#home">HOME</a>
+      <a href="#about">ABOUT</a>
+      <a href="#persons">PERSONS</a>
+      <a href="#contact">CONTACT</a>
+    </nav>
+  </header>
+
+
+  <main>
+
+    <section id="home" class="hero">
+
+      <div class="hero-image"></div>
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content container">
+
+        <div class="hero-eyebrow">
+          <span class="gold-line"></span>
+          <span>A CELEBRATION OF EGYPTIAN CINEMA</span>
+        </div>
+
+        <h1>
+          THE FACES
+          <span>OF <em>CINEMA.</em></span>
+        </h1>
+
+        <p class="hero-description">
+          Every frame holds a story. Every story begins
+          with a person. Discover the artists who bring
+          Egyptian cinema to life.
+        </p>
+
+        <a href="#persons" class="primary-button">
+          <span>DISCOVER THE FACES</span>
+          <span class="button-arrow">↗</span>
+        </a>
+
+      </div>
+
+      <div class="hero-bottom container">
+        <span>EL GOUNA · EGYPT</span>
+        <a href="#about">
+          SCROLL TO EXPLORE <span>↓</span>
+        </a>
+        <span>01 / 05</span>
+      </div>
+
+      <div class="hero-side-label">
+        AN EXPLORATION OF ART & ARTISTS
+      </div>
+
+    </section>
+
+
+    <section id="about" class="about section-spacing">
+
+      <div class="container about-layout">
+
+        <div class="about-visual">
+
+          <div class="about-image">
+            <div class="about-image-placeholder">
+              <span>THE ART OF<br>STORYTELLING</span>
+            </div>
+          </div>
+
+          <div class="about-image-label">
+            <span>01</span>
+            <span>CINEMA IS THE LANGUAGE OF STORIES</span>
+          </div>
+
+        </div>
+
+        <div class="about-content">
+
+          <div class="section-label">
+            <span class="section-line"></span>
+            <span>01 / ABOUT THE FESTIVAL</span>
+          </div>
+
+          <h2>
+            Where stories
+            <em>come alive.</em>
+          </h2>
+
+          <div class="about-copy">
+            <p>
+              Set against the breathtaking backdrop of
+              Egypt's Red Sea coast, El Gouna Film Festival
+              brings together extraordinary voices from
+              the world of cinema.
+            </p>
+
+            <p>
+              Beyond the screen, cinema is shaped by the
+              visionaries, performers, and storytellers
+              who transform imagination into moments
+              that stay with us.
+            </p>
+          </div>
+
+          <div class="about-divider"></div>
+
+          <div class="about-bottom">
+            <span>THE PEOPLE BEHIND THE ART</span>
+            <a href="#persons" class="text-link">
+              MEET THE ARTISTS <span>↗</span>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section id="persons" class="persons section-spacing">
+
+      <div class="container">
+
+        <div class="persons-heading">
+
+          <div>
+            <div class="section-label">
+              <span class="section-line"></span>
+              <span>02 / THE ARTISTS</span>
+            </div>
+
+            <h2>
+              The faces behind
+              <em>the stories.</em>
+            </h2>
+          </div>
+
+          <p>
+            From unforgettable performances to visionary
+            direction, meet the Egyptian artists who
+            have shaped the silver screen.
+          </p>
+
+        </div>
+
+        <div class="gallery-controls">
+
+          <div class="filters" id="filters">
+            <button type="button" class="filter-btn active"
+              data-category="All">ALL FACES</button>
+
+            <button type="button" class="filter-btn"
+              data-category="Actor">ACTORS</button>
+
+            <button type="button" class="filter-btn"
+              data-category="Director">DIRECTORS</button>
+
+            <button type="button" class="filter-btn"
+              data-category="Producer">PRODUCERS</button>
+          </div>
+
+          <div class="search-box">
+            <span class="search-icon">⌕</span>
+            <input type="text" id="personSearch"
+              placeholder="SEARCH THE FACES"
+              aria-label="Search people">
+          </div>
+
+        </div>
+
+        <div class="gallery-information">
+          <span id="resultCount">SHOWING 20 OF 20 FACES</span>
+          <span>HOVER OR TAP TO REVEAL THEIR STORIES ↗</span>
+        </div>
+
+        <div id="peopleGrid" class="people-grid"></div>
+
+        <div id="noResults" class="no-results" hidden>
+          <h3>No faces found.</h3>
+          <p>Try another name or category.</p>
+        </div>
+
+        <div class="gallery-ending">
+          <span class="ending-line"></span>
+          <span>EVERY FACE HAS A STORY WORTH TELLING</span>
+          <span class="ending-line"></span>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="cinema-moment">
+
+      <div class="moment-overlay"></div>
+
+      <div class="container moment-content">
+        <span class="moment-small">03 / MORE THAN A FESTIVAL</span>
+
+        <h2>
+          Cinema is not just
+          <em>what we see.</em>
+          <span>It's what we feel.</span>
+        </h2>
+
+        <p>
+          A tribute to the stories, the artists,
+          and the moments that live beyond the screen.
+        </p>
+      </div>
+
+      <div class="moment-bottom">
+        EL GOUNA · THE ART OF CINEMA
+      </div>
+
+    </section>
+
+
+    <section id="contact" class="contact">
+
+      <div class="newsletter">
+        <div class="container newsletter-layout">
+
+          <div class="newsletter-copy">
+
+            <div class="section-label">
+              <span class="section-line"></span>
+              <span>04 / THE NEXT CHAPTER</span>
+            </div>
+
+            <h2>
+              Stay in
+              <em>the picture.</em>
+            </h2>
+
+            <p>
+              Stories worth sharing. Moments worth remembering.
+              A little cinema, delivered to your inbox.
+            </p>
+
+          </div>
+
+          <div class="newsletter-form-container">
+
+            <span class="form-label">JOIN OUR CINEMA CIRCLE</span>
+
+            <form id="newsletterForm" class="newsletter-form">
+
+              <label for="newsletterEmail" class="sr-only">
+                Your email address
+              </label>
+
+              <input type="email" id="newsletterEmail"
+                placeholder="YOUR EMAIL ADDRESS" required>
+
+              <button type="submit" aria-label="Subscribe">
+                ↗
+              </button>
+
+            </form>
+
+            <p id="newsletterMessage" class="newsletter-message"
+              aria-live="polite">
+              No spam, just the stories that matter.
+            </p>
+
+          </div>
+
+        </div>
+      </div>
+
+
+      <footer class="footer">
+
+        <div class="container">
+
+          <div class="footer-top">
+
+            <div class="footer-brand">
+
+              <div class="footer-brand-logo">
+                <span>GFF</span>
+                <div class="brand-logo-line"></div>
+                <span class="footer-brand-small">
+                  BEYOND<br>THE FRAME
+                </span>
+              </div>
+
+              <p>
+                An independent editorial tribute to the
+                faces, voices, and stories of Egyptian cinema.
+              </p>
+
+              <div class="footer-socials">
+                <a href="https://www.instagram.com/elgounafilmfestival/"
+                  target="_blank" rel="noopener noreferrer"
+                  aria-label="Instagram">
+                  IG <span>↗</span>
+                </a>
+
+                <a href="https://www.facebook.com/ElGounaFilmFestival/"
+                  target="_blank" rel="noopener noreferrer"
+                  aria-label="Facebook">
+                  FB <span>↗</span>
+                </a>
+
+                <a href="https://www.youtube.com/results?search_query=el+gouna+film+festival"
+                  target="_blank" rel="noopener noreferrer"
+                  aria-label="YouTube">
+                  YT <span>↗</span>
+                </a>
+              </div>
+
+            </div>
+
+
+            <div class="footer-links-group">
+
+              <div class="footer-column">
+                <h3>EXPLORE</h3>
+                <a href="#home">Home</a>
+                <a href="#about">Our Story</a>
+                <a href="#persons">The Artists</a>
+                <a href="#contact">Contact</a>
+              </div>
+
+              <div class="footer-column">
+                <h3>THE COLLECTION</h3>
+                <a href="#persons" data-footer-filter="All">All Faces</a>
+                <a href="#persons" data-footer-filter="Actor">Actors</a>
+                <a href="#persons" data-footer-filter="Director">Directors</a>
+                <a href="#persons" data-footer-filter="Producer">Producers</a>
+              </div>
+
+              <div class="footer-column">
+                <h3>FIND US</h3>
+                <span>El Gouna</span>
+                <span>Red Sea, Egypt</span>
+                <a href="https://elgounafilmfestival.com/"
+                  target="_blank" rel="noopener noreferrer">
+                  Official Festival ↗
+                </a>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="footer-statement">
+            <div class="footer-statement-top">
+              <span>AN HOMAGE TO EGYPTIAN CINEMA</span>
+              <span>EST. 2017 · EL GOUNA</span>
+            </div>
+
+            <div class="footer-huge-title">
+              BEYOND THE FRAME<span>.</span>
+            </div>
+          </div>
+
+          <div class="footer-bottom">
+
+            <span>© 2026 BEYOND THE FRAME</span>
+
+            <span>
+              INDEPENDENT STUDENT CONCEPT · NOT AN OFFICIAL GFF WEBSITE
+            </span>
+
+            <a href="#home">
+              BACK TO TOP ↑
+            </a>
+
+          </div>
+
+        </div>
+
+      </footer>
+
+    </section>
+
+  </main>
+
+
+  <script>
+    
+var people = [
+  {
+    name: "Youssra",
+    age: 71,
+    specialist: "Actor",
+    city: "Cairo, Egypt",
+    email: "Not publicly listed",
+    bio: "An icon of Egyptian cinema and television, Youssra has captivated audiences for decades through her unforgettable performances and timeless screen presence.",
+    image: "images/yousra.jpg"
+  },
+  {
+    name: "Mona Zaki",
+    age: 48,
+    specialist: "Actor",
+    city: "Cairo, Egypt",
+    email: "Not publicly listed",
+    bio: "One of Egypt's most celebrated actresses, Mona Zaki is admired for her emotional depth and memorable roles across film, television, and theatre.",
+    image: "images/mona zaki.jpg"
+  },
+  {
+    name: "Hamza Diab",
+    age: 20,
+    specialist: "Actor",
+    city: "Egypt",
+    email: "Not publicly listed",
+    bio: "A rising Egyptian actor known for his appearances in Kamel El Adad and other contemporary television and film productions.",
+    image: "images/hamza diab.jpg"
+  },
+  {
+    name: "Yasmina El Abd",
+    age: 20,
+    specialist: "Actor",
+    city: "Egypt",
+    email: "Not publicly listed",
+    bio: "A talented young Egyptian actress recognized for her vibrant screen presence and emerging career in contemporary Arab entertainment.",
+    image: "images/yasmina.jpg"
+  },
+  {
+    name: "Amina Khalil",
+    age: 37,
+    specialist: "Actor",
+    city: "Cairo, Egypt",
+    email: "Not publicly listed",
+    bio: "An acclaimed Egyptian actress known for her natural performances, sophisticated screen presence, and memorable film and television roles.",
+    image: "images/amina khalil.jpg"
+  },
+  {
+    name: "Amir El Masry",
+    age: 36,
+    specialist: "Actor",
+    city: "London, United Kingdom",
+    email: "Not publicly listed",
+    bio: "A British-Egyptian actor whose international career spans acclaimed independent films, television dramas, and major cinematic productions.",
+    image: "images/amir elmasry.jpg"
+  },
+  {
+    name: "Salma Abu Deif",
+    age: 33,
+    specialist: "Actor",
+    city: "Cairo, Egypt",
+    email: "Not publicly listed",
+    bio: "An Egyptian actress and fashion personality celebrated for her distinctive style and compelling roles in contemporary film and television.",
+    image: "images/salma abudeif.jpg"
+  },
+  {
+    name: "Nour El Nabawy",
+    age: 29,
+    specialist: "Actor",
+    city: "Egypt",
+    email: "Not publicly listed",
+    bio: "A rising Egyptian actor gaining recognition for his charismatic performances and growing presence in contemporary cinema and television.",
+    image: "images/nour elnabawy.jpg"
+  },
+  {
+    name: "Hana El Zahed",
+    age: 32,
+    specialist: "Actor",
+    city: "Cairo, Egypt",
+    email: "Not publicly listed",
+    bio: "A popular Egyptian actress recognized for her charming performances in romantic comedies, television dramas, and successful commercial films.",
+    image: "images/hannah.jpg"
+  },
+  {
+    name: "Kinda Alloush",
+    age: null,
+    specialist: "Actor",
+    city: "Egypt",
+    email: "Not publicly listed",
+    bio: "A Syrian actress widely recognized throughout the Arab world for her expressive performances in Egyptian and Syrian film and television.",
+    image: "images/kinda.jpg"
+  },
+  {
+    name: "Ola Roshdy",
+    age: 46,
+    specialist: "Actor",
+    city: "Cairo, Egypt",
+    email: "Not publicly listed",
+    bio: "An Egyptian actress and creative personality known for her television performances, comedy, and relatable digital storytelling.",
+    image: "images/ola.jpg"
+  },
+  {
+    name: "Ahmed Dawood",
+    age: 43,
+    specialist: "Actor",
+    city: "Egypt",
+    email: "Not publicly listed",
+    bio: "A versatile Egyptian actor admired for his performances in dramatic television series, cinema, and character-driven productions.",
+    image: "images/ahmed dawood.jpg"
+  },
+  {
+    name: "Tuana El Gohary",
+    age: 16,
+    specialist: "Actor",
+    city: "Cairo, Egypt",
+    email: "tuana.elgohary@mad-solutions.com",
+    bio: "A rising Egyptian actress known for Kamel El Adad and the films Restart and El Safa Thanaweya Banat, representing a new generation of Egyptian screen talent.",
+    image: "images/tuana.jpg"
+  },
+  {
+    name: "Yousry Nasrallah",
+    age: 74,
+    specialist: "Director",
+    city: "Cairo, Egypt",
+    email: "Not publicly listed",
+    bio: "An internationally respected Egyptian filmmaker whose thought-provoking cinema explores identity, society, freedom, and personal transformation.",
+    image: "images/yousry nasrallah.jpg"
+  },
+  {
+    name: "Marwan Hamed",
+    age: 49,
+    specialist: "Director",
+    city: "Cairo, Egypt",
+    email: "Not publicly listed",
+    bio: "One of Egypt's leading contemporary directors, celebrated for ambitious cinematic productions including The Blue Elephant and The Originals.",
+    image: "images/marwan hamed.jpg"
+  },
+  {
+    name: "Mohamed Diab",
+    age: 47,
+    specialist: "Director",
+    city: "Egypt",
+    email: "Not publicly listed",
+    bio: "An Egyptian screenwriter and director known for socially conscious filmmaking and internationally recognized projects including Moon Knight.",
+    image: "images/moh diab.jpg"
+  },
+  {
+    name: "Amr Salama",
+    age: 43,
+    specialist: "Director",
+    city: "Cairo, Egypt",
+    email: "Not publicly listed",
+    bio: "An influential Egyptian director and screenwriter whose films combine human storytelling, social commentary, and distinctive creative vision.",
+    image: "images/amr salama.jpg"
+  },
+  {
+    name: "Bushra",
+    age: 45,
+    specialist: "Producer",
+    city: "Cairo, Egypt",
+    email: "Not publicly listed",
+    bio: "An Egyptian actress, producer, and creative industry figure recognized for her contributions to Egyptian cinema and El Gouna Film Festival.",
+    image: "images/Bushra-Rozza.jpg"
+  },
+  {
+    name: "Mohamed Hefzy",
+    age: 51,
+    specialist: "Producer",
+    city: "Cairo, Egypt",
+    email: "Not publicly listed",
+    bio: "An acclaimed Egyptian film producer and screenwriter who has supported independent cinema and helped bring Arab stories to international audiences.",
+    image: "images/moh hefzy.jpg"
+  },
+   {
+    name: "Asser Yassin",
+    age: 45,
+    specialist: "Actor",
+    city: "Egypt",
+    email: "Not publicly listed",
+    bio: "A versatile Egyptian actor admired for his performances in dramatic television series, cinema, and character-driven productions.",
+    image: "images/asser.jpg"
+  }
+];
+
+
+
+    var activeCategory = "All";
+    var searchTerm = "";
+
+
+    function scrollToSection(id) {
+      var section = document.getElementById(id);
+
+      if (section) {
+        section.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+      }
+
+      var mobileNav = document.getElementById("mobileNav");
+      var menuToggle = document.getElementById("menuToggle");
+
+      mobileNav.classList.remove("open");
+      menuToggle.setAttribute("aria-expanded", "false");
+    }
+
+
+    function escapeHTML(value) {
+      return String(value)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#39;");
+    }
+
+
+    function renderPeople() {
+      var grid = document.getElementById("peopleGrid");
+      var html = "";
+      var count = 0;
+
+      for (var i = 0; i < people.length; i++) {
+        var person = people[i];
+
+        var categoryMatch =
+          activeCategory === "All" ||
+          person.specialist === activeCategory;
+
+        var searchMatch = (
+          person.name + " " +
+          person.specialist + " " +
+          person.city
+        ).toLowerCase().includes(searchTerm);
+
+        if (!categoryMatch || !searchMatch) {
+          continue;
+        }
+
+        count++;
+
+        var number = String(i + 1).padStart(2, "0");
+
+        var initials = person.name
+          .split(" ")
+          .map(function(word) {
+            return word.charAt(0);
+          })
+          .slice(0, 2)
+          .join("");
+
+        var frontImage = "";
+        var backImage = "";
+
+        if (person.image !== "") {
+          frontImage =
+            '<img src="' + escapeHTML(person.image) +
+            '" alt="Portrait of ' + escapeHTML(person.name) + '">';
+
+          backImage =
+            '<img src="' + escapeHTML(person.image) +
+            '" alt="Portrait of ' + escapeHTML(person.name) + '">';
+        } else {
+          frontImage =
+            '<img src="" class="empty-portrait" alt="">' +
+            '<span class="portrait-initials">' +
+            escapeHTML(initials) + '</span>';
+
+          backImage =
+            '<img src="" class="empty-portrait" alt="">' +
+            '<span class="portrait-initials">' +
+            escapeHTML(initials) + '</span>';
+        }
+
+        var age = person.age === null
+          ? "Not listed"
+          : person.age;
+
+        html += `
+          <article class="person-card" tabindex="0"
+            role="button"
+            aria-pressed="false"
+            aria-label="Flip ${escapeHTML(person.name)} profile card">
+
+            <div class="card-inner">
+
+              <div class="card-face card-front">
+
+                <div class="portrait-image">
+                  ${frontImage}
+                </div>
+
+                <div class="front-gradient"></div>
+
+                <div class="card-number">
+                  ${number} / ${people.length}
+                </div>
+
+                <div class="front-bottom">
+
+                  <div>
+                    <span class="card-role">
+                      ${escapeHTML(person.specialist.toUpperCase())}
+                    </span>
+
+                    <h3>${escapeHTML(person.name)}</h3>
+                  </div>
+
+                  <span class="flip-symbol">↗</span>
+
+                </div>
+
+              </div>
+
+
+              <div class="card-face card-back">
+
+                <div class="back-photo">
+                  ${backImage}
+
+                  <span class="back-number">
+                    ${number} / ${people.length}
+                  </span>
+                </div>
+
+                <div class="back-content">
+
+                  <span class="back-kicker">
+                    BEHIND THE FRAME
+                  </span>
+
+                  <h3>${escapeHTML(person.name)}</h3>
+
+                  <span class="back-role">
+                    ${escapeHTML(person.specialist.toUpperCase())}
+                  </span>
+
+                  <div class="back-facts">
+
+                    <div>
+                      <span>AGE</span>
+                      <strong>${escapeHTML(age)}</strong>
+                    </div>
+
+                    <div>
+                      <span>CITY</span>
+                      <strong>${escapeHTML(person.city)}</strong>
+                    </div>
+
+                  </div>
+
+                  <p class="back-bio">
+                    ${escapeHTML(person.bio)}
+                  </p>
+
+                  <div class="back-contact">
+                    <span>EMAIL</span>
+                    <span>${escapeHTML(person.email)}</span>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </article>
+        `;
+      }
+
+      grid.innerHTML = html;
+
+      document.getElementById("noResults").hidden = count > 0;
+
+      document.getElementById("resultCount").textContent =
+        "SHOWING " + count + " OF " + people.length + " FACES";
+
+      var cards = document.querySelectorAll(".person-card");
+
+      for (var j = 0; j < cards.length; j++) {
+        cards[j].addEventListener("click", function() {
+          flipCard(this);
+        });
+
+        cards[j].addEventListener("keydown", function(event) {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            flipCard(this);
+          }
+        });
+      }
+    }
+
+
+    function flipCard(card) {
+      card.classList.toggle("is-flipped");
+
+      card.setAttribute(
+        "aria-pressed",
+        String(card.classList.contains("is-flipped"))
+      );
+    }
+
+
+    var navLinks = document.querySelectorAll('a[href^="#"]');
+
+    for (var k = 0; k < navLinks.length; k++) {
+      navLinks[k].addEventListener("click", function(event) {
+        var id = this.getAttribute("href").substring(1);
+
+        if (document.getElementById(id)) {
+          event.preventDefault();
+          scrollToSection(id);
+        }
+      });
+    }
+
+
+    document.getElementById("menuToggle")
+      .addEventListener("click", function() {
+
+        var menu = document.getElementById("mobileNav");
+        var isOpen = menu.classList.toggle("open");
+
+        this.setAttribute("aria-expanded", String(isOpen));
+      });
+
+
+    document.getElementById("filters")
+      .addEventListener("click", function(event) {
+
+        var button = event.target.closest("button[data-category]");
+
+        if (!button) {
+          return;
+        }
+
+        activeCategory = button.getAttribute("data-category");
+
+        var buttons = document.querySelectorAll(".filter-btn");
+
+        for (var i = 0; i < buttons.length; i++) {
+          buttons[i].classList.toggle(
+            "active",
+            buttons[i] === button
+          );
+        }
+
+        renderPeople();
+      });
+
+
+    document.getElementById("personSearch")
+      .addEventListener("input", function() {
+        searchTerm = this.value.trim().toLowerCase();
+        renderPeople();
+      });
+
+
+    var footerFilters =
+      document.querySelectorAll("[data-footer-filter]");
+
+    for (var i = 0; i < footerFilters.length; i++) {
+      footerFilters[i].addEventListener("click", function() {
+        activeCategory = this.getAttribute("data-footer-filter");
+
+        var buttons = document.querySelectorAll(".filter-btn");
+
+        for (var j = 0; j < buttons.length; j++) {
+          buttons[j].classList.toggle(
+            "active",
+            buttons[j].getAttribute("data-category") === activeCategory
+          );
+        }
+
+        renderPeople();
+      });
+    }
+
+
+    document.getElementById("newsletterForm")
+      .addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        var input = document.getElementById("newsletterEmail");
+        var message = document.getElementById("newsletterMessage");
+
+        if (input.checkValidity()) {
+          message.textContent =
+            "Thank you! This is a demonstration newsletter form.";
+          input.value = "";
+        } else {
+          message.textContent =
+            "Please enter a valid email address.";
+        }
+      });
+
+
+    window.addEventListener("scroll", function() {
+      var header = document.getElementById("header");
+
+      if (window.scrollY > 40) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
+    });
+
+
+    renderPeople();
+
+  </script>
+
+</body>
+</html>
